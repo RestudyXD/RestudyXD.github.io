@@ -1,0 +1,12 @@
+<a
+        href="link"
+        target="_blank"
+      >
+        <div class="card">
+          <div class="card-image"></div>
+          <div class="card-text">
+            <h2>namr</h2>
+            <p>name</p>
+          </div>
+        </div>
+      </a>

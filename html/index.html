@@ -1,0 +1,80 @@
+<!DOCSTYPE html>
+<html>
+  <head>
+    <title>歡迎來到易爆官網</title>
+    <meta name="description" content="易爆的官網" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="chk" />
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+    <div class="display" style="z-index; 0;">
+      <div class="menu">
+        <div class="navbar">
+          <a class="navtitle">易爆官網</a>
+          <a href="/command">製作指令</a>
+          <a href="/download">地圖載點</a>
+          <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="display-text">
+      <div class="display-text-large">
+        <a href="https://youtube.com/channel/UCcFyyuHyKBAK84pVKP450Fg"
+          >易爆的苦力怕頻道</a
+        >
+        <div>
+          <div class="display-text-small">
+            從容易爆<br />頻道建立於2016年1月28號<br />網站瀏覽次數：<h10
+              id="count"
+              >0</h10
+            >
+            <script type="text/javascript">
+              const countElement = document.getElementById("count");
+
+              update();
+
+              function update() {
+                fetch("https://api.countapi.xyz/update/twcreeper/twc/?amount=1")
+                  .then(res => res.json())
+                  .then(res => {
+                    countElement.innerHTML = res.value;
+                  });
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="mdui-color-grey-800" style="width:100%; color:#FFF;">
+      <div class="mdui-container">
+        <div class="mdui-row">
+          <div
+            class="mdui-col-xs-12 mdui-col-md-4 mdui-hidden-md-up"
+            style="text-align:center; margin-top:16px; margin-bottom:16px;"
+          >
+            <strong>
+              <a
+                href="https://discord.gg/bkn293X"
+                style="color:#fff;"
+                target="_blank"
+                >易爆DC群組
+              </a>
+              <h>
+                Copyright© 2021 RestudyXD
+              </h>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

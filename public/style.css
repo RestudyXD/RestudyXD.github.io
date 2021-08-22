@@ -1,0 +1,459 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+body {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.glitch.com/cc8ba2d9-1aca-4316-b8d0-1edd1fefce47%2FE798D004-C1A4-4884-A4AB-147C79BCFFC1.jpeg?v=1617461469132");
+}
+
+h1 {
+  color: #FFBB66;
+}
+
+.navbar {
+  padding: 25px 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.navbar a {
+  width: 25%;
+  float: right;
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 1px 10px;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu a.navtitle {
+  float: left;
+  font-size: 30px !important;
+  width: 20%;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn {
+  float: right;
+}
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: #3498db;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+}
+
+.display:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url(wave-bottom.svg);
+  height: 275px;
+  text-align: center;
+}
+
+.display-text {
+  padding: 300px 250px;
+}
+
+.display-text-large {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff0066;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  clear: 5133px;
+}
+
+.display-text-large a {
+  color: #668cff;
+}
+
+.display-text-small {
+  font-size: 25px;
+  color: #000;
+  font-weight: 600;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.display-text-about {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 22px;
+  color: #666;
+  font-weight: 600;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mdui-col-xs-12 {
+  float: left;
+  width: 100%;
+}
+
+[class*="mdui-col-xs-"] {
+  position: relative;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.display-text {
+  padding: 100px 250px;
+}
+in .mdui-col,
+[class*="mdui-col-lg-"],
+[class*="mdui-col-md-"],
+[class*="mdui-col-sm-"],
+[class*="mdui-col-xl-"],
+[class*="mdui-col-xs-"] {
+  position: relative;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.mdui-card {
+  list-style-type: none;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #000;
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  float: center;
+}
+
+.mdui-typo {
+  line-height: 1.8;
+  word-wrap: break-word;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.mdui-row:after,
+[class*="mdui-row-"]:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.mdui-container-fluid:after,
+.mdui-container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+@keyframes animation-card-1 {
+  0% {
+    opacity: 0;
+  } /*初始状态 透明度为0*/
+  10% {
+    opacity: 0.1;
+  } /*过渡状态 透明度为0.1*/
+  20% {
+    opacity: 0.2;
+  } /*过渡状态 透明度为0.2*/
+  30% {
+    opacity: 0.3;
+  } /*过渡状态 透明度为0.3*/
+  40% {
+    opacity: 0.4;
+  } /*过渡状态 透明度为0.4*/
+  50% {
+    opacity: 0.5;
+  } /*过渡状态 透明度为0.5*/
+  60% {
+    opacity: 0.6;
+  } /*过渡状态 透明度为0.6*/
+  70% {
+    opacity: 0.7;
+  } /*过渡状态 透明度为0.7*/
+  80% {
+    opacity: 0.8;
+  } /*过渡状态 透明度为0.8*/
+  90% {
+    opacity: 0.9;
+  } /*过渡状态 透明度为0.9*/
+  100% {
+    opacity: 1;
+  } /*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes animation-card-1 {
+  /*针对webkit内核*/
+  0% {
+    opacity: 0;
+  } /*初始状态 透明度为0*/
+  10% {
+    opacity: 0.1;
+  } /*过渡状态 透明度为0.1*/
+  20% {
+    opacity: 0.2;
+  } /*过渡状态 透明度为0.2*/
+  30% {
+    opacity: 0.3;
+  } /*过渡状态 透明度为0.3*/
+  40% {
+    opacity: 0.4;
+  } /*过渡状态 透明度为0.4*/
+  50% {
+    opacity: 0.5;
+  } /*过渡状态 透明度为0.5*/
+  60% {
+    opacity: 0.6;
+  } /*过渡状态 透明度为0.6*/
+  70% {
+    opacity: 0.7;
+  } /*过渡状态 透明度为0.7*/
+  80% {
+    opacity: 0.8;
+  } /*过渡状态 透明度为0.8*/
+  90% {
+    opacity: 0.9;
+  } /*过渡状态 透明度为0.9*/
+  100% {
+    opacity: 1;
+  } /*结束状态 透明度为1*/
+}
+
+nimation-card-1 {
+  animation: animation-card-1; /*动画名称*/
+  animation-duration: 0.8s; /*动画持续时间*/
+  -webkit-animation: animation-card-1 0.8s; /*针对webkit内核*/
+}
+/* Card2动画动画结束 */
+
+.mcname-header {
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+}
+
+.mdui-card {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.mcname-top {
+  background-color: rgba(233, 30, 99, 0.5);
+}
+
+.mcname-small-title {
+  color: #000000;
+  background: rgba(255, 255, 255, 0);
+  border-left: 5px solid #1E88E5;
+  cursor: default;
+  text-transform: none;
+  text-overflow: ellipsis;
+}
+
+.mcname-small-title:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mcname-small-title:active {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.mdui-color-grey-800 {
+  color: #fff !important;
+  background-color: #424242 !important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1024px) .mdui-container {
+  width: 92%;
+}
+
+@media (min-width: 1024px) .mdui-col-md-4 {
+  float: left;
+  width: 33.333333%;
+}
+
+.mdui-col-xs-12 {
+  float: left;
+  width: 100%;
+}
+
+.card {
+  text-transform: uppercase;
+  position: relative;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 300px 100px 50px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: center;
+  float: left;
+}
+
+.card-image {
+  grid-area: image;
+}
+.card-text {
+  grid-area: text;
+}
+.card-stats {
+  grid-area: stats;
+}
+
+.card-image {
+  grid-area: image;
+  background: url("https://cdn.glitch.com/a982d516-f92e-449d-84fe-bccf9b46594f%2F4DA32A4F-8F8B-4D06-871D-7CF6DD474AD7.png?v=1617520861176");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text .date {
+  color: rgb(255, 7, 110);
+  font-size: 13px;
+}
+.card-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.card-link a {
+  color: #668cff;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+.card {
+  ...transition: 0.5s ease;
+  cursor: pointer;
+  margin: 30px;
+}
+
+.map_1 {
+  font-size: 22px;
+  color: #ff33ff;
+  font-weight: 600;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.map_1 a {
+  color: #fflala;
+}
+
+.map_2 {
+  font-size: 22px;
+  color: #ff33ff;
+  font-weight: 600;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.map_2 a {
+  color: #66ff66;
+}
+
+.w3-panel w3-gray {
+}
